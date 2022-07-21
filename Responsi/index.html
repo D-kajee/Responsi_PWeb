@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+
+<body>
+	<div class="header">
+		<div class="brand">
+    		<h1 class="text-secondary"><span class="text-primary">Kaje</span>Laundry</h1>
+    	</div>
+    	<div class="navbar">
+            <a href="#harga" class="link">Harga</a>
+            <a href="Pesan.php" class="link">order</a>
+        </div>
+    </div>
+
+    <!-- Slideshow -->
+	<div class="slideshow-container">
+
+	  	<div class="mySlides fade">
+	    	<div class="numbertext">1 / 2</div>
+	    	<img src="img2.jpg" style="width:100%">
+	    	<div class="text1">LAUNDRY & CUCI KERING</div>
+	    	<div class="text2"><b>Bersih dan Cepat</b></div>
+	 	</div>
+	  	<div class="mySlides fade">
+	    	<div class="numbertext">2 / 2</div>
+	    	<img src="img3.jpg" style="width:100%">
+	    	<div class="text1">LAUNDRY & CUCI KERING</div>
+	    	<div class="text2"><b>Pekerja Profesional</b></div>
+	  	</div>
+	  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<!-- Slideshow end -->
+
+	<!-- Contact -->
+	<div class="contact">
+		<a href="https://goo.gl/maps/UUfEmEAZz3tS7p5MA" class="link2"><b>Alamat kami</b><br>Kota Yogyakarta.</a>
+		<a href="mailto:jore.sky321@gmail.com" class="link2"><img width="30px" src="gmail.png"><b>Email kami</b><br>jore.sky321@gmail.com</a>
+		<a href="082290722762" class="link2"><b>Telepon kami</b><br>082290722762</a>
+	</div>
+	<!-- Contact end -->
+
+	<!-- Price list -->
+	<h2 style="text-align:center; color: skyblue;">Daftar harga KajeLaundry</h2>
+	<p style="text-align:center; color: #194376; font-size: 50px;"><b>Harga Terbaik</b></p>
+	<a name="harga"></a>
+
+	<div class="columns">
+	  <ul class="price">
+	    <li class="header">Basic</li>
+	    <li class="grey">30K / Kg</li>
+	    <li>Cuci Kering</li>
+	    <li>Setrika</li>
+	    <li> </li>
+	    <li class="grey"><a href="Pesan.php" class="button">Ambil</a></li>
+	  </ul>
+	</div>
+
+	<div class="columns">
+	  <ul class="price">
+	    <li class="header" style="background-color:#04AA6D">Standard</li>
+	    <li class="grey">40K / Kg</li>
+	    <li>Cuci Kering</li>
+	    <li>Setrika</li>
+	    <li>Antar Gratis</li>
+	    <li class="grey"><a href="Pesan.php" class="button">Ambil</a></li>
+	  </ul>
+	</div>
+
+	<div class="columns">
+	  <ul class="price">
+	    <li class="header">Premium</li>
+	    <li class="grey">50K / Kg</li>
+	    <li>Cuci Kering</li>
+	    <li>Setrika</li>
+	    <li>Antar Gratis</li>
+	    <li class="grey"><a href="Pesan.php" class="button">Ambil</a></li>
+	  </ul>
+	</div>
+	<!-- Price list end -->
+<script type="text/javascript">
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
